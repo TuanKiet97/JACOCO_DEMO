@@ -30,31 +30,9 @@ _Note: Set a lower Coverage ratio in pom.xml_
  _Note: You may add additional configuration for jacoco and control the behaviour. For additional configuration details visit [here.](https://www.eclemma.org/jacoco/trunk/doc/maven.html)_  
 
 -Add jacoco plugin 
-`$ <plugin>
-       <groupId>org.jacoco</groupId>
-       <artifactId>jacoco-maven-plugin</artifactId>
-         <version>${jacoco-maven-plugin.version}</version>
-      	 <executions>
-           <execution>
-             <id>default prepare-agent</id>
-             <goals>
-               <goal>prepare-agent</goal>
-             </goals>
-           </execution>
-           <!-- prepare agent before integration tests -->
-           <execution>
-             <id>prepare-agent</id>
-             <goals>
-               <goal>report</goal>
-             </goals>
-             <phase>test</phase>
-             <configuration>
-               <propertyName>itCoverageAgent</propertyName>
-             </configuration>
-           </execution>
-         </executions>
-</plugin>`
 
+![Coverage Report All](demo.png)
+            
 # Result: 
 The below test coverage report shows coverage for `testAll` profile. 
 The other important point to consider here is we have tried to increase the coverage of module1 method `concatenation` from module3 by running cucumber tests. Cucumber tests can easily be replaced by any other functional test frameworks like Karate API Testing Framework.
